@@ -5,7 +5,7 @@ $(document).ready(function()
   $.ajax
   ({
     type: "GET",
-    url: "http://localhost:8081/gettingMemes",
+    url: "https://arcane-sierra-70178.herokuapp.com/gettingMemes",
     success: function(memesArray)
     {
        for(var i=0;i<memesArray.length;i++)
@@ -54,7 +54,7 @@ $(document).ready(function()
                     //sending data to memes route in nodejs (backend)
                     $.ajax({
                     type: 'POST',
-                    url: 'http://localhost:8081/memes',
+                    url: 'https://arcane-sierra-70178.herokuapp.com/memes',
                     data: data,
                     success: function(res)
                     {
@@ -86,7 +86,7 @@ $(document).ready(function()
         //sending data to memes route in nodejs (backend)
         $.ajax({
         type: 'POST',
-        url: 'http://localhost:8081/updateMeme',
+        url: 'https://arcane-sierra-70178.herokuapp.com/updateMeme',
         data: data,
         success: function(res)
         {
